@@ -9,6 +9,12 @@ Array.prototype.pushIfNotPresent = function (pValue){
     return false;
 }
 
+Array.prototype.hasValue = function (pValue){
+    var lArray = this || [];
+    
+    return !(lArray.index(pValue) == -1);
+}
+
 Array.prototype.removeDuplicatedValues = function (){
     var lArray  = this || [];
     var lLength = lArray.length;
@@ -25,4 +31,18 @@ Array.prototype.removeDuplicatedValues = function (){
     }
     
     return false;
+}
+
+Array.prototype.countOf = function (pValue){
+    var count   = 0;
+    var lArray  = this || [];
+    var lLength = lArray.length
+    
+    for (var i = 0 ; i < lLength; i++){
+        if (lArray[i] == pValue){
+            count++;
+        }
+    }
+    
+    return count;
 }
