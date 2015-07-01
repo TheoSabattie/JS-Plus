@@ -12,7 +12,7 @@ Array.prototype.pushIfNotPresent = function (pValue){
 Array.prototype.hasValue = function (pValue){
     var lArray = this || [];
     
-    return !(lArray.indexOf(pValue) == -1);
+    return !(lArray.index(pValue) == -1);
 }
 
 Array.prototype.removeDuplicatedValues = function (){
